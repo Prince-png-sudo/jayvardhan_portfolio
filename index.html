@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Personal portfolio of Jayvardhan Vashistha, first-year BTech AIML student at JECRC University." />
+  <title>Jayvardhan Vashistha | Portfolio</title>
+  <!-- Apply the saved theme before CSS paints to avoid a color flash -->
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem("portfolio-theme");
+        document.documentElement.setAttribute(
+          "data-theme",
+          savedTheme === "light" ? "light" : "dark"
+        );
+      } catch (error) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Skip link helps keyboard users jump to the main content -->
+  <a class="skip-link" href="#home">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="#home">JV</a>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="true"
+          aria-label="Switch to light mode">
+          <span class="theme-toggle-icon" aria-hidden="true"></span>
+          <span class="theme-toggle-text">Light</span>
+        </button>
+
+        <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false"
+          aria-label="Open menu">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="hero section">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">BTech AIML · JECRC University</p>
+          <h1>Jayvardhan Vashistha</h1>
+          <p class="lead">
+            second-year BTech student specializing in Artificial Intelligence
+            and Machine Learning. I am building a strong foundation in
+            programming, mathematics, and creative tools while working toward
+            practical project experience.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore Projects</a>
+            <a class="btn btn-secondary" href="#contact">Contact Me</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Quick profile">
+          <p class="hero-card-label">Currently</p>
+          <p class="hero-card-title">Learning by building</p>
+          <p>
+            Focused on C, beginner C++, Python, and 3D animation while
+            exploring AI, physics, and game-inspired problem solving.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">About Me</p>
+          <h2>A second-year journey in AI and engineering</h2>
+        </header>
+
+        <div class="about-grid">
+          <article class="panel">
+            <h3>Education</h3>
+            <p>
+              I am a first-year BTech student specializing in Artificial
+              Intelligence and Machine Learning at JECRC University, Jaipur.
+              This stage of my degree is about building fundamentals I can
+              later apply to real projects.
+            </p>
+          </article>
+
+          <article class="panel">
+            <h3>Interests</h3>
+            <p>
+              I am interested in artificial intelligence, mathematics,
+              physics, programming, Blender, cricket, and video games. These
+              topics keep me curious about both technical systems and creative
+              design.
+            </p>
+          </article>
+
+          <article class="panel">
+            <h3>Learning journey</h3>
+            <p>
+              My goal is to gain practical experience by developing projects
+              and improving my technical skills. This portfolio will grow as I
+              complete college assessments and personal experiments.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+     SKILLS SECTION
+========================== -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+
+        <div class="section-header">
+          <p class="eyebrow">My Technical Skills</p>
+          <h2>Technologies & Areas of Interest</h2>
+          <p>
+            Exploring programming, artificial intelligence,
+            machine learning, and web development.
+          </p>
+        </div>
+
+        <!-- Skills filter bar -->
+        <div class="skills-filter">
+          <div class="skills-search-wrap">
+            <span class="skills-search-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+            </span>
+            <input id="skills-search" type="search" class="skills-search-input"
+              placeholder="Search technologies & interests…" aria-label="Filter skills" autocomplete="off" />
+          </div>
+          <div class="skills-chips" role="group" aria-label="Filter by category">
+            <button class="chip chip-active" data-filter="all">All</button>
+            <button class="chip" data-filter="programming">Programming</button>
+            <button class="chip" data-filter="ai-ml">AI & ML</button>
+            <button class="chip" data-filter="web">Web</button>
+            <button class="chip" data-filter="creative">Creative</button>
+          </div>
+          <p class="skills-no-results" id="skills-no-results" aria-live="polite" hidden>No skills match your search.</p>
+        </div>
+
+        <div class="card-grid" id="skills-card-grid">
+
+          <!-- Programming: C -->
+          <article class="skill-card" data-tags="programming c fundamentals">
+            <h3>C Programming</h3>
+            <p>
+              Learning programming fundamentals, logical
+              problem-solving, loops, functions, arrays,
+              and pointers using C.
+            </p>
+          </article>
+
+          <!-- Programming: C++ -->
+          <article class="skill-card" data-tags="programming c++ oop fundamentals">
+            <h3>C++</h3>
+            <p>
+              Exploring object-oriented programming,
+              classes, objects, functions, and
+              fundamental programming concepts.
+            </p>
+          </article>
+
+          <!-- Python -->
+          <article class="skill-card" data-tags="programming python fundamentals">
+            <h3>Python</h3>
+            <p>
+              Practicing Python programming, problem-solving,
+              functions, data structures, and small
+              programming projects.
+            </p>
+          </article>
+
+          <!-- Machine Learning -->
+          <article class="skill-card" data-tags="ai-ml machine learning algorithms data">
+            <h3>Machine Learning (ML)</h3>
+            <p>
+              Exploring machine learning concepts,
+              algorithms, model training, and
+              data-driven problem-solving.
+            </p>
+          </article>
+
+          <!-- Generative AI -->
+          <article class="skill-card" data-tags="ai-ml generative ai llm">
+            <h3>Generative AI</h3>
+            <p>
+              Learning how generative AI systems create
+              content and how AI tools can be integrated
+              into useful applications.
+            </p>
+          </article>
+
+          <!-- Natural Language Processing -->
+          <article class="skill-card" data-tags="ai-ml nlp natural language processing">
+            <h3>Natural Language Processing (NLP)</h3>
+            <p>
+              Exploring how computers process,
+              understand, and work with human language.
+            </p>
+          </article>
+
+          <!-- Large Language Models -->
+          <article class="skill-card" data-tags="ai-ml llm language models generative ai">
+            <h3>Large Language Models (LLMs)</h3>
+            <p>
+              Learning about language models,
+              conversational AI, prompt design,
+              and AI-powered applications.
+            </p>
+          </article>
+
+          <!-- Web Development -->
+          <article class="skill-card" data-tags="web html css javascript frontend">
+            <h3>Web Development</h3>
+            <p>
+              Building websites using HTML, CSS,
+              and JavaScript, with an interest in
+              integrating AI-powered features.
+            </p>
+          </article>
+
+          <!-- 3D Animation -->
+          <article class="skill-card" data-tags="creative 3d blender animation design">
+            <h3>3D Animation & Blender</h3>
+            <p>
+              Creating 3D scenes, environments,
+              animations, and cinematic renders
+              using Blender.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section">
+      <div class="container">
+
+        <div class="section-header">
+          <p class="eyebrow">My Work</p>
+          <h2>Practical Projects</h2>
+          <p class="section-note">
+            A collection of programming practicals and beginner projects,
+            covering Python fundamentals, problem-solving, and interactive applications.
+            Click any card to explore it.
+          </p>
+        </div>
+
+        <div class="proj-grid">
+
+          <!-- Project 1: Factorial -->
+          <article class="proj-card" data-num="01" data-title="Python Factorial Program"
+            data-desc="A beginner Python program that calculates the factorial of a number using recursion and iteration. It handles invalid or negative input gracefully with proper error messages."
+            data-tags="Python,Loops,Fundamentals"
+            data-url="https://github.com/Prince-png-sudo/-python-factorial-practical">
+            <div class="proj-card-inner">
+              <span class="proj-num">01</span>
+              <div class="proj-icon" aria-hidden="true">🐍</div>
+              <h3 class="proj-title">Python Factorial Program</h3>
+              <p class="proj-desc">Calculates factorials with loop logic and handles edge cases like negative numbers.
+              </p>
+              <div class="proj-tags">
+                <span>Python</span><span>Loops</span><span>Fundamentals</span>
+              </div>
+              <button class="proj-cta" aria-label="View details for Python Factorial Program">
+                View Project <span aria-hidden="true">→</span>
+              </button>
+            </div>
+            <div class="proj-card-glow" aria-hidden="true"></div>
+          </article>
+
+          <!-- Project 2: Fibonacci -->
+          <article class="proj-card" data-num="02" data-title="Python Fibonacci Series"
+            data-desc="A Python practical that generates the Fibonacci number sequence using iteration and basic programming logic. Demonstrates loop control and sequence generation in Python."
+            data-tags="Python,Loops,Sequences" data-url="https://github.com/Prince-png-sudo/python-fibonacci-practical">
+            <div class="proj-card-inner">
+              <span class="proj-num">02</span>
+              <div class="proj-icon" aria-hidden="true">🔢</div>
+              <h3 class="proj-title">Python Fibonacci Series</h3>
+              <p class="proj-desc">Generates Fibonacci numbers using iteration and fundamental sequence logic.</p>
+              <div class="proj-tags">
+                <span>Python</span><span>Loops</span><span>Sequences</span>
+              </div>
+              <button class="proj-cta" aria-label="View details for Python Fibonacci Series">
+                View Project <span aria-hidden="true">→</span>
+              </button>
+            </div>
+            <div class="proj-card-glow" aria-hidden="true"></div>
+          </article>
+
+          <!-- Project 3: Structure to Dictionary -->
+          <article class="proj-card" data-num="03" data-title="Structure to Dictionary"
+            data-desc="A practical exploring the representation of structured information using Python dictionaries. Covers key-value pair mapping, nested structures, and data organization techniques."
+            data-tags="Python,Dictionaries,Data Handling"
+            data-url="https://github.com/Prince-png-sudo/python-basics-25BCON0814-struct-to-dict-main-practical">
+            <div class="proj-card-inner">
+              <span class="proj-num">03</span>
+              <div class="proj-icon" aria-hidden="true">📦</div>
+              <h3 class="proj-title">Structure to Dictionary</h3>
+              <p class="proj-desc">Maps structured data into Python dictionaries with key-value pair logic.</p>
+              <div class="proj-tags">
+                <span>Python</span><span>Dictionaries</span><span>Data Handling</span>
+              </div>
+              <button class="proj-cta" aria-label="View details for Structure to Dictionary">
+                View Project <span aria-hidden="true">→</span>
+              </button>
+            </div>
+            <div class="proj-card-glow" aria-hidden="true"></div>
+          </article>
+
+          <!-- Project 4: Code Improvement -->
+          <article class="proj-card" data-num="04" data-title="Messy Python Code Improvement"
+            data-desc="A code-quality practical focused on refactoring and improving the readability of a student grade-report program. Covers clean code principles, naming conventions, and code organization."
+            data-tags="Python,Debugging,Code Quality"
+            data-url="https://github.com/Prince-png-sudo/Messy-Python-Code-Improvement-25BCON0814">
+            <div class="proj-card-inner">
+              <span class="proj-num">04</span>
+              <div class="proj-icon" aria-hidden="true">🛠️</div>
+              <h3 class="proj-title">Messy Code Improvement</h3>
+              <p class="proj-desc">Refactors a student grade-report program for readability and clean structure.</p>
+              <div class="proj-tags">
+                <span>Python</span><span>Debugging</span><span>Code Quality</span>
+              </div>
+              <button class="proj-cta" aria-label="View details for Messy Python Code Improvement">
+                View Project <span aria-hidden="true">→</span>
+              </button>
+            </div>
+            <div class="proj-card-glow" aria-hidden="true"></div>
+          </article>
+
+          <!-- Project 5: Quiz Application -->
+          <article class="proj-card" data-num="05" data-title="Interactive Quiz Application"
+            data-desc="An interactive quiz application designed to present questions and let users test their knowledge. Features dynamic question flow, score tracking, and a results summary at the end."
+            data-tags="Python,Quiz,Logic" data-url="https://github.com/Prince-png-sudo/QUIZ-PE-main">
+            <div class="proj-card-inner">
+              <span class="proj-num">05</span>
+              <div class="proj-icon" aria-hidden="true">🧠</div>
+              <h3 class="proj-title">Interactive Quiz Application</h3>
+              <p class="proj-desc">A quiz app with dynamic questions, score tracking, and results summary.</p>
+              <div class="proj-tags">
+                <span>Python</span><span>Quiz</span><span>Logic</span>
+              </div>
+              <button class="proj-cta" aria-label="View details for Interactive Quiz Application">
+                View Project <span aria-hidden="true">→</span>
+              </button>
+            </div>
+            <div class="proj-card-glow" aria-hidden="true"></div>
+          </article>
+
+          <!-- Project 6: Reading List -->
+          <article class="proj-card" data-num="06" data-title="Book Reading List"
+            data-desc="A reading-list application built in Python for organizing and keeping track of books. Supports adding, listing, and managing a personal book collection with data persistence."
+            data-tags="Python,Application,Data Management"
+            data-url="https://github.com/Prince-png-sudo/reading_list-main">
+            <div class="proj-card-inner">
+              <span class="proj-num">06</span>
+              <div class="proj-icon" aria-hidden="true">📚</div>
+              <h3 class="proj-title">Book Reading List</h3>
+              <p class="proj-desc">Organizes and tracks a personal book collection with add and list functionality.</p>
+              <div class="proj-tags">
+                <span>Python</span><span>Application</span><span>Data Management</span>
+              </div>
+              <button class="proj-cta" aria-label="View details for Book Reading List">
+                View Project <span aria-hidden="true">→</span>
+              </button>
+            </div>
+            <div class="proj-card-glow" aria-hidden="true"></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT MODAL -->
+    <div id="proj-modal" class="proj-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+      <div class="proj-modal-backdrop"></div>
+      <div class="proj-modal-box">
+        <button class="proj-modal-close" id="proj-modal-close" aria-label="Close project details">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+        <div class="proj-modal-header">
+          <span class="proj-modal-icon" id="modal-icon" aria-hidden="true"></span>
+          <span class="proj-modal-num" id="modal-num"></span>
+        </div>
+        <h3 class="proj-modal-title" id="modal-title"></h3>
+        <p class="proj-modal-desc" id="modal-desc"></p>
+        <div class="proj-modal-tags" id="modal-tags"></div>
+        <a class="btn btn-primary proj-modal-link" id="modal-link" href="#" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right:0.4rem"
+            aria-hidden="true">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+          View on GitHub ↗
+        </a>
+      </div>
+    </div>
+
+
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-alt">
+      <div class="container contact-wrap">
+        <header class="section-header">
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s connect</h2>
+          <p class="section-note">
+          </p>
+        </header>
+
+        <ul class="contact-list">
+          <li>
+            <span>GitHub</span>
+            <p>
+              <a href="https://github.com/Prince-png-sudo" target="_blank" rel="noopener noreferrer">
+                https://github.com/Prince-png-sudo
+              </a>
+            </p>
+          </li>
+          <li>
+            <span>Email</span>
+            <p>
+              <a href="mailto:jayvardhanvashistha6@gmail.com">
+                jayvardhanvashistha6@gmail.com
+              </a>
+            </p>
+          </li>
+
+          <li>
+            <span>LinkedIn</span>
+            <p>
+              <a href="https://www.linkedin.com/in/jayvardhan-vashistha-59ba63361/" target="_blank"
+                rel="noopener noreferrer">
+                My LinkedIn Profile
+              </a>
+            </p>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- AI CHATBOT -->
+    <section id="chatbot" class="section section-alt">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Meet Ved</p>
+          <h2>Chat with Ved, my AI</h2>
+          <p class="section-note">
+            Have a question about my skills, education, or learning journey?
+            Ask Ved below.
+          </p>
+        </header>
+
+        <div class="chatbot-panel">
+          <div id="chat-messages" class="chat-messages" role="log" aria-live="polite" aria-label="Chat messages">
+            <!-- Book page-turn thinking animation -->
+            <div class="ved-thinking" id="ved-thinking" aria-label="Ved is thinking" aria-live="polite" hidden>
+              <div class="book-wrap">
+                <img src="old_book.png" alt="Old open book" class="book-img" />
+                <!-- Animated page-turn sweep overlaid on top of the image -->
+                <div class="book-sweep sweep-1" aria-hidden="true"></div>
+                <div class="book-sweep sweep-2" aria-hidden="true"></div>
+                <div class="book-glow" aria-hidden="true"></div>
+              </div>
+              <p class="ved-thinking-label">Ved is thinking<span
+                  class="dots"><span>.</span><span>.</span><span>.</span></span></p>
+            </div>
+
+            <p class="chat-message assistant-message">
+              Hi! I'm Ved 👋 Ask me about Jayvardhan's education, skills, or interests.
+            </p>
+          </div>
+
+          <form id="chat-form" class="chat-form">
+            <label for="chat-input">Your message</label>
+            <textarea id="chat-input" name="message" rows="2" maxlength="1000" placeholder="Ask me something..."
+              required></textarea>
+            <div class="chat-form-footer">
+              <p id="chat-status" role="status" aria-live="polite">
+                Ved is ready
+              </p>
+              <button id="chat-send" class="btn btn-primary" type="submit">
+                Send message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Jayvardhan Vashistha</p>
+      <p>&copy; 2026 Jayvardhan Vashistha. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
